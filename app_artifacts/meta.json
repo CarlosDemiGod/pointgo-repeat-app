@@ -1,0 +1,68 @@
+{
+  "dibuat": "2026-11-11T17:23:35",
+  "mode": "fold9",
+  "models": [
+    "lgbm"
+  ],
+  "feature_set": "all",
+  "seed": 0,
+  "train_cutoffs": [
+    "2025-04-01",
+    "2025-05-01",
+    "2025-06-01",
+    "2025-07-01",
+    "2025-08-01",
+    "2025-09-01",
+    "2025-10-01",
+    "2025-11-01",
+    "2025-12-01",
+    "2026-01-01",
+    "2026-02-01",
+    "2026-03-01"
+  ],
+  "val_cutoff": "2026-05-01",
+  "test_cutoff": "2026-07-01",
+  "independent_after": "2026-05-01",
+  "n_train": 1823155,
+  "kalibrasi": "Regresi isotonik pada data validasi; basis proporsi positif validasi tercatat per model.",
+  "metrics": {
+    "lgbm": {
+      "val_base_rate": 0.07605026004905775,
+      "test_base_rate": 0.130189250409712,
+      "pr_auc": 0.4732631574722141,
+      "roc_auc": 0.8304455708871207,
+      "brier_mentah": 0.22105285738709637,
+      "brier_terkalibrasi": 0.08947363590936054
+    }
+  },
+  "cfg": {
+    "window": {
+      "obs_days": 90,
+      "gap_days": 7,
+      "pred_days": 30
+    },
+    "feature_windows": [
+      7,
+      30,
+      90
+    ],
+    "seasonal_peaks": [
+      [
+        "2025-03-01",
+        "2025-04-07"
+      ],
+      [
+        "2026-02-18",
+        "2026-03-27"
+      ]
+    ]
+  },
+  "versions": {
+    "lightgbm": "4.5.0",
+    "torch": "2.7.0+cpu",
+    "tabm": "0.0.3",
+    "sklearn": "1.4.2",
+    "pandas": "2.2.2",
+    "shap": "0.54.1"
+  }
+}

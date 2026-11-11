@@ -1,0 +1,11 @@
+# Data dan hasil olahan tidak boleh masuk repositori
+work/
+*.csv
+*.parquet
+*.pkl
+*.npz
+.venv/
+__pycache__/
+.env
+# kecuali artefak aplikasi
+!app_artifacts/performance_summary.csv

@@ -1,0 +1,17 @@
+streamlit>=1.32.0
+pandas>=2.0
+numpy
+pyarrow
+scikit-learn>=1.4
+scipy
+joblib
+matplotlib
+lightgbm
+shap
+pyyaml
+# TabM bersifat opsional. Bila pemasangan di layanan online gagal, hapus empat baris di bawah;
+# aplikasi tetap berjalan dengan LightGBM saja.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+tabm
+rtdl_num_embeddings
